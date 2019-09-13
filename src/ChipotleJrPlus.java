@@ -79,13 +79,16 @@ public class ChipotleJrPlus {
         String Queso;
         String Sour_Cream;
 
-        // Creating random ArrayList (Buritto)
+        // Creating random ArrayList (burrito)
         for(int i=0; i<=25; i++) {
+
             String rice = (String)findElement(Rice);
             String meat = (String)findElement(Meat);
             String beans = (String)findElement(Beans);
             String salsa = (String)findElement(Salsa);
             String veggies = (String)findElement(Veggies);
+
+            // Creating ArrayList
             ArrayList<String> burrito = new ArrayList<String>();
             burrito.add(rice);
             burrito.add(meat);
@@ -97,6 +100,7 @@ public class ChipotleJrPlus {
             burrito.add("Queso");
             burrito.add("Sour_Cream");
 
+            // Creating subList from "burrito" ArrayList
             Random r = new Random();
             int rndNum = r.nextInt(4) + 5;
             List<String> myBurrito = burrito.subList(0, rndNum);
